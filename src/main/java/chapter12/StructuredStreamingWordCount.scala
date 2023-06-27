@@ -16,7 +16,7 @@ object StructuredStreamingWordCount {
 
     val lines = spark.readStream
       .format("socket")
-      .option("host","localhost")
+      .option("host","192.168.80.128")
       .option("port",9999)
       .load()
     val words = lines.as[String].flatMap(_.split(" "))

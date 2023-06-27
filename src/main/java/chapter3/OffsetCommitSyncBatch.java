@@ -16,7 +16,7 @@ import java.util.concurrent.atomic.AtomicBoolean;
  * Created by 朱小厮 on 2018/7/29.
  */
 public class OffsetCommitSyncBatch {
-    public static final String brokerList = "localhost:9092";
+    public static final String brokerList = "192.168.80.128:9092";
     public static final String topic = "topic-demo";
     public static final String groupId = "group.demo";
     private static AtomicBoolean running = new AtomicBoolean(true);

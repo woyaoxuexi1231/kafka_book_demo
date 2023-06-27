@@ -62,7 +62,7 @@ public class JmxConnectionDemo {
 
     public static void main(String[] args) {
         JmxConnectionDemo jmxConnectionDemo =
-                new JmxConnectionDemo("localhost:9999");
+                new JmxConnectionDemo("192.168.80.128:9999");
         jmxConnectionDemo.init();
         System.out.println(jmxConnectionDemo.getMsgInPerSec());
     }

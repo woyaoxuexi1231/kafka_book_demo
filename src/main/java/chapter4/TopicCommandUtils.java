@@ -17,7 +17,7 @@ public class TopicCommandUtils {
      */
     public static void createTopic(){
         String[] options = new String[]{
-                "--zookeeper", "localhost:2181/kafka",
+                "--zookeeper", "192.168.80.128:2181/kafka",
                 "--create",
                 "--replication-factor", "1",
                 "--partitions", "1",
@@ -31,7 +31,7 @@ public class TopicCommandUtils {
      */
     public static void describeTopic(){
         String[] options = new String[]{
-                "--zookeeper", "localhost:2181/kafka",
+                "--zookeeper", "192.168.80.128:2181/kafka",
                 "--describe",
                 "--topic", "topic-create"
         };
@@ -40,7 +40,7 @@ public class TopicCommandUtils {
 
     public static void listTopic(){
         String[] options = new String[]{
-                "--zookeeper", "localhost:2181/kafka",
+                "--zookeeper", "192.168.80.128:2181/kafka",
                 "--list"
         };
         kafka.admin.TopicCommand.main(options);

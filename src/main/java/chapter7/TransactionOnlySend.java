@@ -14,7 +14,7 @@ import java.util.Properties;
  */
 public class TransactionOnlySend {
     public static final String topic = "topic-transaction";
-    public static final String brokerList = "localhost:9092";
+    public static final String brokerList = "192.168.80.128:9092";
     public static final String transactionId = "transactionId";
 
     public static void main(String[] args) {

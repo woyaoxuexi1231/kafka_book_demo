@@ -19,7 +19,7 @@ public class BootstrapServerParam {
     public static final String topic = "topic-demo";
 
     public static MetadataResponse getMetadata(int throttleTimeMs) {
-        Node node = new Node(0, "localhost", 9093);
+        Node node = new Node(0, "192.168.80.128", 9093);
         List<Node> brokers = Collections.singletonList(node);
         int controllerId = 0;
         String clusterId = "64PniqfkRHa4ASFUisNXrw";

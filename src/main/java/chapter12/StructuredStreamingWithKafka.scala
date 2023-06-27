@@ -9,7 +9,7 @@ import org.apache.spark.sql.SparkSession
   */
 class StructuredStreamingWithKafka {
   object StructuredStreamingWithKafka {
-    val brokerList = "localhost:9092" //Kafka 集群的地址
+    val brokerList = "192.168.80.128:9092" //Kafka 集群的地址
     val topic = "topic-spark" //订阅的主题
     def main(args: Array[String]): Unit = {
       val spark = SparkSession.builder.master("local[2]")
