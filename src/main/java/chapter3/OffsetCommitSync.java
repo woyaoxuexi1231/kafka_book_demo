@@ -43,6 +43,7 @@ public class OffsetCommitSync {
                 for (ConsumerRecord<String, String> record : records) {
                     //do some logical processing.
                 }
+                // 批量提交了
                 consumer.commitSync();
             }
         } finally {

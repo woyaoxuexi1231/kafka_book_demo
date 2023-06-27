@@ -46,6 +46,7 @@ public class OffsetCommitSyncSingle {
                     long offset = record.offset();
                     TopicPartition partition =
                             new TopicPartition(record.topic(), record.partition());
+                    // 每消费一次, 就提交一次位移
                     consumer.commitSync(Collections
                             .singletonMap(partition, new OffsetAndMetadata(offset + 1)));
                 }

@@ -39,13 +39,16 @@ public class OffsetCommitSyncBatch {
         KafkaConsumer<String, String> consumer = new KafkaConsumer<>(props);
         consumer.subscribe(Arrays.asList(topic));
 
+        // 提交的阈值
         final int minBatchSize = 200;
+        // 消息缓存
         List<ConsumerRecord> buffer = new ArrayList<>();
         while (running.get()) {
             ConsumerRecords<String, String> records = consumer.poll(1000);
             for (ConsumerRecord<String, String> record : records) {
                 buffer.add(record);
             }
+            // 消息达到提交阈值, 进行批量提交
             if (buffer.size() >= minBatchSize) {
                 //do some logical processing with buffer.
                 consumer.commitSync();
